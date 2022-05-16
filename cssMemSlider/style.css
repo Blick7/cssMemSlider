@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(29, 26, 26);
+}
+
+.image {
+  width: 30rem;
+  height: 30rem;
+  float: left;
+}
+
+.image1 {
+  background-image: url('./assets/What-comes-after-720-721-Then-why-did-you-write-1080-meme-6702.jpg') ;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.image2 {
+  background-image: url('./assets/photo_2022-05-15_16-18-48.jpg') ;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.image3 {
+  background-image: url('./assets/E29FaQqWYAIUSMa.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.image4 {
+  background-image: url('./assets/photo_2022-05-13_00-38-26.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.image5 {
+  background-image: url('./assets/photo_2022-05-10_18-30-03.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.slider {
+  width: 100%;
+  max-width: 30rem;
+  margin: 1.3rem auto;
+  overflow: hidden;
+  position: relative;
+}
+
+input {
+  display: none;
+}
+
+.slider__memes {
+  display: flex;
+  width: calc(5 * 100%);
+  transition: .5s;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slider__info {
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+
+.description {
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s;
+  visibility: hidden;
+  color: #fff;
+  font-size: 2rem;
+  flex-wrap: wrap;
+}
+
+#meme1:checked ~ .slider__info > .slider__text > .description-one,
+#meme2:checked ~ .slider__info > .slider__text > .description-two,
+#meme3:checked ~ .slider__info > .slider__text > .description-three,
+#meme4:checked ~ .slider__info > .slider__text > .description-four,
+#meme5:checked ~ .slider__info > .slider__text > .description-five {
+  visibility: visible;
+  opacity: 1;
+}
+#meme1:checked ~ .slider__info > .slider__text > .description-one {
+  visibility: visible;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.radion-button {
+  width: 1.3rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.radion-button span:hover { 
+  background-color: #dee7e7;
+  border-color: #dee7e7;
+}
+
+.radion-button span {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: solid 0.1rem rgb(55, 184, 55);
+  background-color: rgb(55, 184, 55);
+  border-radius: 50%;
+  transition: .2s;
+}
+
+
+#meme1:checked ~ .slider__memes {
+  transform: translateX(0);
+}
+
+#meme2:checked ~ .slider__memes {
+  transform: translateX(-20%);
+}
+
+#meme3:checked ~ .slider__memes {
+  transform: translateX(-40%);
+}
+
+#meme4:checked ~ .slider__memes {
+  transform: translateX(-60%);
+}
+
+#meme5:checked ~ .slider__memes {
+  transform: translateX(-80%);
+}
+
+#meme1:checked ~ .slider__info > .buttons > .rb1 > span,
+#meme2:checked ~ .slider__info > .buttons > .rb2 > span,
+#meme3:checked ~ .slider__info > .buttons > .rb3 > span,
+#meme4:checked ~ .slider__info > .buttons > .rb4 > span,
+#meme5:checked ~ .slider__info > .buttons > .rb5 > span {
+  border: solid 0.2rem rgb(55, 184, 55);
+  background-color: transparent;
+}
+
+#meme1:checked ~ .slider__info > .buttons > .rb1 > span:hover,
+#meme2:checked ~ .slider__info > .buttons > .rb2 > span:hover,
+#meme3:checked ~ .slider__info > .buttons > .rb3 > span:hover,
+#meme4:checked ~ .slider__info > .buttons > .rb4 > span:hover,
+#meme5:checked ~ .slider__info > .buttons > .rb5 > span:hover {
+  border: solid 0.2rem rgb(55, 184, 55);
+  background-color: rgb(83, 117, 83);
+}
+
+.radion-button:hover > span {
+  border: solid 0.2rem rgb(55, 184, 55);
+  background-color: rgb(83, 117, 83);
+}
+
+@media (max-width: 500px) {
+  .slider__info {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 2%;
+  }
+  .slider__text {
+    font-size: 0.8rem;
+    line-height: 140%;
+    text-align: start;
+    padding-top: 0.3rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .buttons {
+    order: -1;
+    align-self: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .image {
+    width: 20rem;
+    height: 20rem;
+  }
+  .slider {
+    max-width: 20rem;
+  }
+  .slider__info {
+    padding-top: 1rem;
+  }
+  .slider__text {
+    padding-top: 1rem;
+  }
+}
