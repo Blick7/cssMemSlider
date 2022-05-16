@@ -159,6 +159,11 @@ input {
   background-color: rgb(83, 117, 83);
 }
 
+.radion-button:hover > span {
+  border: solid 0.2rem rgb(55, 184, 55);
+  background-color: rgb(83, 117, 83);
+}
+
 @media (max-width: 500px) {
   .slider__info {
     margin-top: 0.5rem;
