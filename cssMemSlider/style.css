@@ -28,7 +28,7 @@
   background-size: 100%;
 }
 .image5 {
-  background-image: url('./assets/photo_2022-05-12_00-57-56.jpg');
+  background-image: url('./assets/photo_2022-05-10_18-30-03.jpg');
   background-size: 100%;
 }
 
@@ -38,6 +38,10 @@
   margin: 1.3rem auto;
   overflow: hidden;
   position: relative;
+}
+
+input {
+  display: none;
 }
 
 .slider__memes {
@@ -62,13 +66,70 @@
 }
 
 #meme1:checked ~ .slider__info > .slider__text > .description-one,
-#meme1:checked ~ .slider__info > .slider__text > .description-two,
-#meme1:checked ~ .slider__info > .slider__text > .description-three,
-#meme1:checked ~ .slider__info > .slider__text > .description-four,
-#meme1:checked ~ .slider__info > .slider__text > .description-five {
+#meme2:checked ~ .slider__info > .slider__text > .description-two,
+#meme3:checked ~ .slider__info > .slider__text > .description-three,
+#meme4:checked ~ .slider__info > .slider__text > .description-four,
+#meme5:checked ~ .slider__info > .slider__text > .description-five {
   visibility: visible;
   opacity: 1;
 }
 #meme1:checked ~ .slider__info > .slider__text > .description-one {
   visibility: visible;
+}
+
+.buttons {
+  display: flex;
+}
+
+.radion-button {
+  width: 1rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.radion-button span:hover { 
+  background-color: #dee7e7;
+  border-color: red;
+}
+
+.radion-button span {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: solid 0.1rem #495053;
+  background-color: #131414;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+#meme1:checked ~ .slider__memes {
+  transform: translateX(0);
+}
+
+#meme2:checked ~ .slider__memes {
+  transform: translateX(-30rem);
+}
+
+#meme3:checked ~ .slider__memes {
+  transform: translateX(-60rem);
+}
+
+#meme4:checked ~ .slider__memes {
+  transform: translateX(-90rem);
+}
+
+#meme5:checked ~ .slider__memes {
+  transform: translateX(-120rem);
+}
+
+#meme1:checked ~ .slider__info > .buttons > .rb1 > span,
+#meme2:checked ~ .slider__info > .buttons > .rb2 > span,
+#meme3:checked ~ .slider__info > .buttons > .rb3 > span,
+#meme4:checked ~ .slider__info > .buttons > .rb4 > span,
+#meme5:checked ~ .slider__info > .buttons > .rb5 > span {
+  border: solid 0.1rem #2D9CDB;
+  background-color: transparent;
 }
