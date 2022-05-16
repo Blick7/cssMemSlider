@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.image {
+  width: 30rem;
+  height: 30rem;
+}
+
+.image1 {
+  background-image: url('./assets/photo_2022-05-10_18-30-02.jpg') ;
+  background-size: 100%;
+  
+}
+.image2 {
+  background-image: url('./assets/photo_2022-05-15_16-18-48.jpg') ;
+  background-size: 100%;
+
+}
+.image3 {
+  background-image: url('./assets/photo_2022-05-15_10-14-43.jpg');
+  background-size: 100%;
+}
+.image4 {
+  background-image: url('./assets/photo_2022-05-13_00-38-26.jpg');
+  background-size: 100%;
+}
+.image5 {
+  background-image: url('./assets/photo_2022-05-12_00-57-56.jpg');
+  background-size: 100%;
+}
+
+.slider {
+  width: 90%;
+  max-width: 30rem;
+  margin: 1.3rem auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__memes {
+  display: flex;
+  width: calc(5 * 100%);
+  /* gap: 1rem; */
+  transition: .5s;
+}
+
+.slider__info {
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.description {
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s;
+  visibility: hidden;
+}
+
+#meme1:checked ~ .slider__info > .slider__text > .description-one,
+#meme1:checked ~ .slider__info > .slider__text > .description-two,
+#meme1:checked ~ .slider__info > .slider__text > .description-three,
+#meme1:checked ~ .slider__info > .slider__text > .description-four,
+#meme1:checked ~ .slider__info > .slider__text > .description-five {
+  visibility: visible;
+  opacity: 1;
+}
+#meme1:checked ~ .slider__info > .slider__text > .description-one {
+  visibility: visible;
+}
