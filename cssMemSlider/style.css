@@ -130,6 +130,6 @@ input {
 #meme3:checked ~ .slider__info > .buttons > .rb3 > span,
 #meme4:checked ~ .slider__info > .buttons > .rb4 > span,
 #meme5:checked ~ .slider__info > .buttons > .rb5 > span {
-  border: solid 0.1rem #2D9CDB;
+  border: solid 0.1rem #4e404c;
   background-color: transparent;
 }
